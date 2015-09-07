@@ -3,7 +3,8 @@
 
 <beans>
 	<bean id="triangle" class="com.topyfi.javabrains.Triangle" > 
-		<property name="type" value="Equilateral" />
+		<constructor-arg index="0" value="Equilateral" />
+		<constructor-arg index="1" value="20" />
 	</bean>
 
 
