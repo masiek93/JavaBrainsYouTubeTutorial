@@ -4,16 +4,18 @@
 <beans>
 	<bean id="parenttriangle" class="com.topyfi.javabrains.Triangle" abstract="true">
 		<property name="pointA" ref="zeroPoint" />
-	</bean>
+		</bean>
 	
-	<bean id="triangle1" class="com.topyfi.javabrains.Triangle" scope="prototype" parent="parenttriangle"> 
+	<bean id="triangle" class="com.topyfi.javabrains.Triangle"  parent="parenttriangle"> 
+		
 		<property name="pointB" ref="point2" />
 		<property name="pointC" ref="point3" />
 	
 	</bean>
 	
-	<bean id="triangle2" class="com.topyfi.javabrains.Triangle" scope="prototype" parent="parenttriangle"> 
+	<bean id="triangle2" class="com.topyfi.javabrains.Triangle" scope="singleton" parent="parenttriangle" init-method="myInit" destroy-method="cleanUp"> 
 		<property name="pointB" ref="point2" />
+		<property name="pointC" ref="point3" />
 	
 	</bean>
 	
