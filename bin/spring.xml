@@ -25,7 +25,7 @@
 		<property name="x" value="-20" />
 		<property name="y" value="0" />
 	</bean>
-	<bean id="point3" class="com.topyfi.javabrains.Point">
+	<bean id="center" class="com.topyfi.javabrains.Point">
 		<property name="x" value="23 " />
 		<property name="y" value="0" />
 	</bean>
