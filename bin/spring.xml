@@ -3,13 +3,10 @@
 
 <beans>
 	<bean id="triangle" class="com.topyfi.javabrains.Triangle" scope="prototype"> 
-		<property name="points">
-		<list>
-			<ref bean="zeroPoint" />
-			<ref bean="point2" />
-			<ref bean="point3" />
-		</list>
-		</property> 
+		<property name="pointA" ref="zeroPoint" />
+		<property name="pointB" ref="point2" />
+		<property name="pointC" ref="point3" />
+	
 	</bean>
 	
 	<bean id="zeroPoint" class="com.topyfi.javabrains.Point">
