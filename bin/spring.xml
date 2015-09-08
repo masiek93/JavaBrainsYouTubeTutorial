@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://springframework.org/dtd/spring-beans-2.0.dtd">
+<!-- <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://springframework.org/dtd/spring-beans-2.0.dtd"> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+	
+	xmlns:context="http://www.springframework.org/schema/context">
 
-<beans>
-	<bean id="triangle" class="com.topyfi.javabrains.Triangle" > 
-		<property name="pointA" ref="zeroPoint" />
+<!-- 	<bean id="triangle" class="com.topyfi.javabrains.Triangle" > 
+		<property name="pointA" ref="point1" />
 		<property name="pointB" ref="point2" />
 		<property name="pointC" ref="point3" />
 	</bean>
-	
-	<bean id="zeroPoint" class="com.topyfi.javabrains.Point">
+	 -->
+	<bean id="point1" class="com.topyfi.javabrains.Point">
+		<qualifier value="circleRelated" />
 		<property name="x" value="0" />
 		<property name="y" value="0" />
 	</bean>
+	
 	<bean id="point2" class="com.topyfi.javabrains.Point">
 		<property name="x" value="-20" />
 		<property name="y" value="0" />
@@ -21,10 +30,12 @@
 		<property name="y" value="0" />
 	</bean>
 	<bean id="circle" class="com.topyfi.javabrains.Circle" > 
-		<property name="center" ref="zeroPoint" />
+		<!-- <property name="center" ref="zeroPoint" /> -->
 	</bean>
 	
-	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+	<!-- <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" /> -->
+	<!-- <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" /> -->
+	<context:annotation-config/>
 
 </beans>
 
