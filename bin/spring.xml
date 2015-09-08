@@ -20,7 +20,9 @@
 		<property name="x" value="23 " />
 		<property name="y" value="0" />
 	</bean>
-
+	<bean id="circle" class="com.topyfi.javabrains.Circle" > 
+		<property name="center" ref="zeroPoint" />
+	</bean>
 
 </beans>
 
