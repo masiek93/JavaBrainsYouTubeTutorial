@@ -20,6 +20,9 @@
 		<property name="x" value="23 " />
 		<property name="y" value="0" />
 	</bean>
+	
+	<bean class="com.topyfi.javabrains.DisplayNameBeanPostProcessor" />
+	 
 
 
 </beans>
