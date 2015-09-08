@@ -3,27 +3,29 @@
 
 <beans>
 	<bean id="triangle" class="com.topyfi.javabrains.Triangle" > 
-		<property name="pointA" ref="zeroPoint" />
-		<property name="pointB" ref="point2" />
-		<property name="pointC" ref="point3" />
+		<property name="pointA" ref="pointA" />
+		<property name="pointB" ref="pointB" />
+		<property name="pointC" ref="pointC" />
 	</bean>
 	
-	<bean id="zeroPoint" class="com.topyfi.javabrains.Point">
-		<property name="x" value="0" />
-		<property name="y" value="0" />
+	<bean id="pointA" class="com.topyfi.javabrains.Point">
+		<property name="x" value="${pointA.pointX}" />
+		<property name="y" value="${pointA.pointY}" />
 	</bean>
-	<bean id="point2" class="com.topyfi.javabrains.Point">
+	<bean id="pointB" class="com.topyfi.javabrains.Point">
 		<property name="x" value="-20" />
 		<property name="y" value="0" />
 	</bean>
-	<bean id="point3" class="com.topyfi.javabrains.Point">
+	<bean id="pointC" class="com.topyfi.javabrains.Point">
 		<property name="x" value="23 " />
 		<property name="y" value="0" />
 	</bean>
 	
-	<bean class="com.topyfi.javabrains.DisplayNameBeanPostProcessor" />
-	 
-
+	<!--  <bean class="com.topyfi.javabrains.DisplayNameBeanPostProcessor" /> -->
+	<!--  <bean class="com.topyfi.javabrains.MyBeanFactoryPP" /> -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
+		<property name="locations" value="pointsconfig.property" />
+	</bean>
 
 </beans>
 
