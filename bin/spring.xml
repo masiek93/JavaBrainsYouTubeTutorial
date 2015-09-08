@@ -23,6 +23,8 @@
 	<bean id="circle" class="com.topyfi.javabrains.Circle" > 
 		<property name="center" ref="zeroPoint" />
 	</bean>
+	
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
 
 </beans>
 
