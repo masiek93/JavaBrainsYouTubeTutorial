@@ -16,7 +16,11 @@ public class DrawingApp {
 		context.registerShutdownHook();
 		Shape shape= (Shape) context.getBean("circle");
 		shape.draw();
-		Objects.requireNonNull(shape);
+		//System.out.println(context.getMessage("mes", null, "Default Greeting", null));
+		
+		
+		
+		//Objects.requireNonNull(shape);
 		
 	}
 }
